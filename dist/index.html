@@ -10,9 +10,37 @@
 </head>
 <body>
     <div class="wrapper">
-        <nav class="navigation-top">Navigation top</nav>
-        <nav class="navigation-side">Navigation side</nav>
-        <div class="view-todo">Main View</div>
+        <nav class="navigation-top">
+            <input type="image" class="button add" id="create-todo" src="../src/img/create-new.png">
+            <input type="image" class="button info" id="show-info" src="../src/img/info.png">
+        </nav>
+        <nav class="navigation-side">
+            <div class="container">
+                <div class="container-inbox">
+                   <input type="image" class="button inbox" id="show-inbox" src="../src/img/inbox.png">
+                   <h2>Inbox</h2>
+                </div>
+                <div class="container-today">
+                    <input type="image" class="button today" id="show-today" src="../src/img/today.png">
+                    <h2>Today</h2>
+                </div>
+                <div class="container-personal">
+                    <input type="image" class="button personal" id="show-personal" src="../src/img/personal.png">
+                    <h2>Personal</h2>
+                    <div class="new-personal">
+                        <input type="image" class="button add-personal" id="create-personal" src="../src/img/add.png">
+                        <h3>Create New</h3>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="view-todo">
+            <h1 class="project project-title">Project Title</h1>
+            <ul class="project project-list">
+                <li>Finish Dishes</li>
+                <li>Throw the trash</li>
+            </ul>
+        </div>
     </div> 
     <script src="main.js"></script>
 </body>
