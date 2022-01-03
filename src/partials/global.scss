@@ -2,8 +2,29 @@
 	padding: 0;
 	margin: 0;
 	vertical-align: baseline;	
+	box-sizing: border-box;
 }
 
 body {
+	font-size: 100%;
 	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-template-rows: repeat(12, 1fr);
+}
+
+.navigation-top {
+	background-color: $navigation-top;
+	grid-column: col-start / span 12;
+	grid-row: 1;
+}
+
+.navigation-side {
+	background-color: $navigation-side;
+	grid-column: col-start / span 2;
+	grid-row: 2 / 13;
 }
