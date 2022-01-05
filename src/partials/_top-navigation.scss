@@ -1,0 +1,15 @@
+.navigation-top {
+	@include flexBox($justify: flex-end);
+	background-color: $navigation-top;
+	grid-column: col-start / span 12;
+	grid-row: 1;
+
+	.navigation-prop {
+		@include flexBox;
+		margin-right: 5.625rem;
+
+		.info {
+			margin-left: 4.063rem;
+		}
+	}
+}

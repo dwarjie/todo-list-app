@@ -1,0 +1,40 @@
+.navigation-side {
+	color: $side-text-color;
+	background-color: $navigation-side;
+	grid-column: col-start / span 2;
+	grid-row: 2 / 13;
+	overflow: hidden;
+
+	.container {
+		@include flexBox($direction: column, $align: flex-start);
+		gap: 1rem;
+		max-width: 70%;
+		margin: 3.75rem auto 0 auto;
+
+		.active {
+			font-weight: 600;
+		}
+
+		.container-project {
+			@include flexBox($justify: flex-start, $align: flex-start);
+			gap: 1rem;
+			flex-wrap: wrap;	
+
+			.personal {
+				@include flexBox();
+				gap: 1rem;
+				flex-wrap: nowrap;
+			}
+		}
+
+		.container-personal {
+
+			.new-personal {
+				margin-left: 20px;
+			}
+			.add-personal {
+				max-width: 20px;
+			}
+		}
+	}
+}
