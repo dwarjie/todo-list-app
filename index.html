@@ -11,23 +11,27 @@
 <body>
     <div class="wrapper">
         <nav class="navigation-top">
-            <input type="image" class="button add" id="create-todo" src="../src/img/create-new.png">
-            <input type="image" class="button info" id="show-info" src="../src/img/info.png">
+            <div class="navigation-prop">
+                <input type="image" class="button add" id="create-todo" src="../src/img/create-new.png">
+                <input type="image" class="button info" id="show-info" src="../src/img/info.png">
+            </div>
         </nav>
         <nav class="navigation-side">
             <div class="container">
-                <div class="container-inbox">
+                <div class="container-project container-inbox">
                    <input type="image" class="button inbox" id="show-inbox" src="../src/img/inbox.png">
-                   <h2>Inbox</h2>
+                   <h2 class="active">Inbox</h2>
                 </div>
-                <div class="container-today">
+                <div class="container-project container-today">
                     <input type="image" class="button today" id="show-today" src="../src/img/today.png">
                     <h2>Today</h2>
                 </div>
-                <div class="container-personal">
-                    <input type="image" class="button personal" id="show-personal" src="../src/img/personal.png">
-                    <h2>Personal</h2>
-                    <div class="new-personal">
+                <div class="container-project container-personal">
+                    <div class="personal personal-project">
+                        <input type="image" class="button personal" id="show-personal" src="../src/img/personal.png">
+                        <h2>Personal</h2>
+                    </div>
+                    <div class="personal new-personal">
                         <input type="image" class="button add-personal" id="create-personal" src="../src/img/add.png">
                         <h3>Create New</h3>
                     </div>
@@ -37,8 +41,28 @@
         <div class="view-todo">
             <h1 class="project project-title">Project Title</h1>
             <ul class="project project-list">
-                <li>Finish Dishes</li>
-                <li>Throw the trash</li>
+                <li class="project project-list-item">
+                    <div class="list-item">
+                        <input type="checkbox">
+                        <h2>Finish the Dishes</h2>
+                        <div class="todo-prop">
+                            <h3>29/2/2022</h3>
+                            <inp29/2/2022ut type="image" class="button todo-edit" id="edit-todo" src="../src/img/edit.png">
+                            <input type="image" class="button todo-delete" id="delete-todo" src="../src/img/delete.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="project project-list-item">
+                    <div class="list-item">
+                        <input type="checkbox">
+                        <h2>Throw the trash</h2>
+                        <div class="todo-prop">
+                            <h3>29/2/2022</h3>
+                            <input type="image" class="button todo-edit" id="edit-todo" src="../src/img/edit.png">
+                            <input type="image" class="button todo-delete" id="delete-todo" src="../src/img/delete.png">
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div> 
