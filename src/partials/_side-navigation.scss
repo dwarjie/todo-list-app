@@ -11,6 +11,10 @@
 		max-width: 70%;
 		margin: 3.75rem auto 0 auto;
 
+		h2, h3 {
+			cursor: pointer;
+		}
+
 		.active {
 			font-weight: 600;
 		}
