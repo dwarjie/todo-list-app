@@ -33,12 +33,16 @@ h3 {
 	grid-template-rows: repeat(12, 1fr);
 }
 
-.view-todo {
-	grid-column: col-start 4 / 12;
-	grid-row: 3 / 13;
-}
-
 .button {
 	max-width: 30px;
 	height: auto;
+}
+
+.button-hover:hover {
+	transform: scale(1.1);
+	transition: 120ms transform ease-in-out;
+}
+
+.text-hover:hover {
+	font-weight: 600;
 }

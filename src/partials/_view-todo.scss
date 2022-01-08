@@ -1,0 +1,66 @@
+.view-todo {
+	grid-column: col-start 4 / 12;
+	grid-row: 3 / 13;
+
+	.project-list {
+		@include flexBox($direction: column);
+		margin-top: 1.25rem;
+
+		.list-item {
+			@include flexBox($direction: row, $justify: space-between);
+			min-width: 100%;
+			margin-bottom: 1rem;
+			height: 4rem;
+			background-color: $navigation-top;
+			border-radius: 10px;
+			padding: 1.6rem;
+
+			.todo-prop, .todo-title {
+				@include flexBox();
+			}
+
+			input[type="checkbox"] {
+				/* Add if not using autoprefixer */
+				-webkit-appearance: none;
+				appearance: none;
+				/* For iOS < 15 to remove gradient background */
+				background-color: #fff;
+				/* Not removed via appearance */
+				display: grid;
+				cursor: pointer;
+				place-content: center;
+				margin: 0;
+				margin-right: 0.9em;
+				font: inherit;
+				width: 1.5em;
+				height: 1.5em;
+				border-radius: 0.50em;
+			}
+
+			input[type="checkbox"]::before {
+				content: "";
+				width: 0.75em;
+				height: 0.75em;
+				border-radius: 0.2em;
+				transform: scale(0);
+				transition: 120ms transform ease-in-out;
+				box-shadow: inset 1em 1em $mid-priority;
+			}
+
+			input[type="checkbox"]:checked::before {
+				transform: scale(1);
+			}
+
+			.high-priority {
+				border: 0.15em solid $high-priority;
+			}
+
+			.todo-prop {
+
+				.todo-edit {
+					margin: 0 1.25rem 0 1.8rem;
+				}	
+			}
+		}
+	}
+}
