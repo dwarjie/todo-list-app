@@ -1,0 +1,38 @@
+.modal {
+	@include twelveColumn();
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background-color: $modal-shade;
+
+	.modal-container {
+		grid-column: col-start 3 / 11;
+		grid-row: 3 / 12;
+		background-color: $modal-background;
+		border-radius: 10px;
+		padding: 1.25rem 5.6rem;
+
+		.modal-top {
+			@include flexBox($justify: space-between);
+			margin-bottom: 1.25rem;
+		}
+
+		.modal-form form{
+			@include flexBox($direction: column, $align: flex-start);
+
+			textarea {
+				resize: none;
+				width: 100%;
+			}
+
+			input {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
