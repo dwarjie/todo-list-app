@@ -1,6 +1,5 @@
 .modal {
 	@include twelveColumn();
-	display: none;
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -9,6 +8,11 @@
 	height: 100vh;
 	overflow: auto;
 	background-color: $modal-shade;
+	// in order to hide the modal at first
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 
 	.modal-container {
 		grid-column: col-start 3 / 11;
@@ -74,4 +78,11 @@
 			}
 		}
 	}
+}
+// in order to show the modal with a simple animation
+.show-modal {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
