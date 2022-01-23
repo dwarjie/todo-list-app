@@ -1,3 +1,4 @@
+import { Get_Details } from "./get_todo_details.js";
 // this module is for accessing the modal form
 // once the Add button is clicked, it will check for required field if one is empty, prompt that all field should be filled
 // if all are filled, get all the data then call the factory function for creating a new todo 
@@ -9,6 +10,8 @@ export const Add_Todo = (function() {
 	// add eventlistener to the button
 	btnAddItem.addEventListener('click', addToDoItem);
 
-	function addTodoItem() {
+	function addToDoItem() {
+		const todo = Get_Details();
+		console.log(todo)
 	}
 })();
