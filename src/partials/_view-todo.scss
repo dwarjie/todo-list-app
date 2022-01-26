@@ -55,6 +55,14 @@
 				border: 0.15em solid $high-priority;
 			}
 
+			.mid-priority {
+				border: 0.15em solid $mid-priority;
+			}
+
+			.low-priority {
+				border: 0.15em solid $low-priority;
+			}
+
 			.todo-prop {
 
 				.todo-edit {
