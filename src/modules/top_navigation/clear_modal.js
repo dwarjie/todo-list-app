@@ -8,7 +8,6 @@ const inputTitle = document.querySelector('#modal-title');
 const inputDescription = document.querySelector('#modal-description');
 
 export const Clear_Form = (function() {
-	console.log('Cleared')
 	inputDueDate.value = Current_Date;
 	inputPriority.value = "high-priority";
 	inputTitle.value = "";
