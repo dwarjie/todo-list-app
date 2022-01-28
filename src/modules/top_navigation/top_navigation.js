@@ -1,5 +1,6 @@
 import { modal, Modal } from './show_modal.js';
 import { CloseModal } from './close_modal.js';
+import { Set_Current_Date } from '../date/set_current_date.js';
 // This module will handle the click event for the buttons in top navigation
 // add button and the info button
 

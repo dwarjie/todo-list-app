@@ -1,4 +1,5 @@
 import { Get_Details } from "./get_todo_details.js";
+import { Clear_Form } from "../top_navigation/clear_modal.js";
 import { Adder_Todo } from "../item_adder/adder.js";
 import { Inbox } from "../inbox/inbox.js";
 // this module is for accessing the modal form
@@ -18,6 +19,7 @@ export const Add_Todo = (function() {
 		let itemDetails = Get_Details();
 		collections = Adder_Todo(itemDetails);
 		Inbox.render();
+		Clear_Form(); // clear the form
 	}
 
 	function getCollection() {
