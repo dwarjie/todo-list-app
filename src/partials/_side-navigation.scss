@@ -34,10 +34,16 @@
 		.container-personal {
 
 			.new-personal {
+				display: none;
 				margin-left: 20px;
+
+				.add-personal {
+					max-width: 20px;
+				}
 			}
-			.add-personal {
-				max-width: 20px;
+
+			.show-new-personal {
+				display: flex;
 			}
 
 			.project-pop-up {
@@ -76,6 +82,10 @@
 					}
 				}
 			}
+			.show-pop-up {
+				opacity: 1;
+				visibility: visible;
+			}	
 		}
 	}
 }
