@@ -1,3 +1,5 @@
+import { Clear_Button_State } from '../renderer/clear_button_state.js';
+import { Render_Button_State } from '../renderer/render_button_state.js';
 import { Add_Todo } from '../add_todo/add_todo.js';
 import { Render_Todo } from "../renderer/render.js";
 import { Clear_Content } from '../renderer/clear_content.js';
@@ -12,7 +14,9 @@ export const Inbox = (function() {
 
 	function render() {
 		// change the project title
+		Clear_Button_State();
 		Clear_Content();
+		Render_Button_State("#show-inbox");
 		projectTitle.innerHTML = "Inbox";
 		Render_Todo(Add_Todo.getCollection());
 	}
