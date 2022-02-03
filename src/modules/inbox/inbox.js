@@ -18,7 +18,7 @@ export const Inbox = (function() {
 		Clear_Content();
 		Render_Button_State("#show-inbox");
 		projectTitle.innerHTML = "Inbox";
-		Render_Todo(Add_Todo.getCollection());
+		Render_Todo(Add_Todo.getCollection().inbox);
 	}
 
 	return {

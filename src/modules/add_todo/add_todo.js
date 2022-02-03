@@ -9,10 +9,14 @@ import { Inbox } from "../inbox/inbox.js";
 
 const btnAddItem = document.querySelector('#add-item');
 export const Add_Todo = (function() {
-	let collections = []; // here will go the todo_collection
+	let collections = {
+		inbox: [],
+		personal: {}
+	}; // here will go the todo_collection
 	// add eventlistener to the button
 	btnAddItem.addEventListener('click', addToDoItem);
 
+	// Validate the modal form first if all has value. else show an alert
 	// this function will get the details from the modal form
 	// return the details as an object then assign it to itemDetails
 	// then call the Adder_Todo in order to add the object to the todoCollection
@@ -20,7 +24,7 @@ export const Add_Todo = (function() {
 		// validate if all input has value
 		if (Validate_Todo()) {
 			let itemDetails = Get_Details();
-			collections = Adder_Todo(itemDetails);
+			collections = Adder_Todo(itemDetails, "Inbox");
 			Inbox.render();
 			Clear_Form(); // clear the form
 		}else {
