@@ -11,11 +11,11 @@ const btnAddItem = document.querySelector('#add-item');
 export const Add_Todo = (function() {
 	let collections = {
 		inbox: [],
-		personal: {}
+		personal: []
 	}; // here will go the todo_collection
 	// add eventlistener to the button
 	btnAddItem.addEventListener('click', addToDoItem);
-
+	let projectTitle = document.querySelector('.project-title');
 	// Validate the modal form first if all has value. else show an alert
 	// this function will get the details from the modal form
 	// return the details as an object then assign it to itemDetails
@@ -24,7 +24,7 @@ export const Add_Todo = (function() {
 		// validate if all input has value
 		if (Validate_Todo()) {
 			let itemDetails = Get_Details();
-			collections = Adder_Todo(itemDetails, "Inbox");
+			collections = Adder_Todo(itemDetails, projectTitle.innerHTML);
 			Inbox.render();
 			Clear_Form(); // clear the form
 		}else {

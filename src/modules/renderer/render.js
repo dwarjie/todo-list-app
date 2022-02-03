@@ -4,7 +4,6 @@ import { Todo_Container } from "../container/todo_container.js";
 
 const todoList = document.querySelector('#todo-list');
 export function Render_Todo(todoCollection) {
-	console.log(todoCollection)
 	// check if there's a value to the todoCollection object
 	if (Object.keys(todoCollection).length != 0) {
 		todoList.innerHTML = todoCollection.map((item) => {
