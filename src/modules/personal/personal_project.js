@@ -1,1 +1,0 @@
-// this is the factory function for the personal project

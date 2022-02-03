@@ -10,7 +10,7 @@ export const Add_Project = (function() {
 	// function callback for the add project button
 	function addPersonalProject() {
 		personalProjectCollection = Adder_Personal_Project();
-		Personal.render();
+		Personal.renderPersonalProject();
 	}
 
 	function getCollection() {
