@@ -12,19 +12,19 @@ let todoCollections = {
 
 // check the project title in order to know if the todo is for personal or inbox
 export function Adder_Todo(itemDetails, projectTitle) {
-	console.log(itemDetails)
 	// inbox
 	if (Title_Checker(projectTitle)) {
 		todoCollections.inbox.push(itemDetails);
 	}else{
 		// if project title does not exist. Create it
 		// else just add it to the project
-		if(Project_Checker(todoCollections, projectTitle)) {
-			let projectCollection = todoCollections.personal[projectTitle];
-			todoCollections.personal[projectTitle].push(...projectCollection, itemDetails);
-		}else
-			todoCollections.personal[projectTitle] = [itemDetails];
+		if(Project_Checker(todoCollections.personal, projectTitle)) {
+			todoCollections.personal[projectTitle].push(itemDetails)
+		}else{
+			todoCollections.personal[projectTitle] = [];
+			todoCollections.personal[projectTitle].push(itemDetails)
+		}
 	}
-	console.log(todoCollections)
+	console.log(todoCollections.personal)
 	return todoCollections; // return the whole collection
 }
