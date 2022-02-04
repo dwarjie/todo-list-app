@@ -1,3 +1,4 @@
+import { Title_Checker } from '../item_adder/title_checker.js';
 import { Get_Details } from "./get_todo_details.js";
 import { Clear_Form } from "../top_navigation/clear_modal.js";
 import { Validate_Todo } from "../validation/validate_todo.js";
@@ -24,8 +25,16 @@ export const Add_Todo = (function() {
 		// validate if all input has value
 		if (Validate_Todo()) {
 			let itemDetails = Get_Details();
-			collections = Adder_Todo(itemDetails, projectTitle.innerHTML);
-			Inbox.render();
+			// check if the user is adding to inbox or personal by checking the project title
+			console.log(projectTitle.innerHTML)
+			if (Title_Checker(projectTitle.innerHTML)) {
+				// user is adding to the inbox
+				collections = Adder_Todo(itemDetails, "Inbox");
+				Inbox.render();
+			}else {
+				collections = Adder_Todo(itemDetails, projectTitle.innerHTML);
+				console.log('Personal Render')
+			}
 			Clear_Form(); // clear the form
 		}else {
 			alert("Fill all fields!");

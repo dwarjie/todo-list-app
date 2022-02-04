@@ -25,6 +25,6 @@ export function Adder_Todo(itemDetails, projectTitle) {
 			todoCollections.personal[projectTitle].push(itemDetails)
 		}
 	}
-	console.log(todoCollections.personal)
+	console.log(todoCollections)
 	return todoCollections; // return the whole collection
 }
