@@ -1,3 +1,4 @@
+import { Filter_Project } from './filter_project.js';
 import { Add_Todo } from '../add_todo/add_todo.js';
 import { Current_Date } from '../date/current_date.js';
 // this module will filter the todo collection
@@ -18,8 +19,10 @@ export const Filtered_Today = (function() {
 	function getFilteredCollection() {
 		// get the todo collection from Add_Todo module
 		// then filter it
-		let todoCollection = Add_Todo.getCollection();
+		let todoCollection = Add_Todo.getCollection().inbox;
 		let filteredCollection = todoCollection.filter(dueToday);
+		// filter the todo collection in personal project
+		Filter_Project(Add_Todo.getCollection().personal, dueToday);
 
 		return filteredCollection;
 	}
