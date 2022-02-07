@@ -8,7 +8,12 @@ export function Filter_Project(todoCollection, callBackFunc) {
 	const projectKeys = Object.keys(todoCollection); // get the keys of the object
 	for(const key of projectKeys) {
 		// then iterate through the project using the key
-		filteredCollection.push(todoCollection[key].filter(callBackFunc));
+		// filteredCollection.push(todoCollection[key].filter(callBackFunc));
+		todoCollection[key].filter((item) => {
+			if (callBackFunc(item)) {
+				filteredCollection.push(item)
+			}
+		});
 	}
 
 	console.log(filteredCollection)
