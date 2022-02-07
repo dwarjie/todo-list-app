@@ -4,6 +4,7 @@ import { Clear_Form } from "../top_navigation/clear_modal.js";
 import { Validate_Todo } from "../validation/validate_todo.js";
 import { Adder_Todo } from "../item_adder/adder.js";
 import { Inbox } from "../inbox/inbox.js";
+import { Personal } from '../personal/personal.js';
 // this module is for accessing the modal form
 // once the Add button is clicked, it will check for required field if one is empty, prompt that all field should be filled
 // if all are filled, get all the data then call the factory function for creating a new todo 
@@ -33,6 +34,7 @@ export const Add_Todo = (function() {
 				Inbox.render();
 			}else {
 				collections = Adder_Todo(itemDetails, projectTitle.innerHTML);
+				Personal.update(); // update the view-todo
 				console.log('Personal Render')
 			}
 			Clear_Form(); // clear the form

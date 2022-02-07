@@ -21,16 +21,23 @@ export const Personal = (function() {
 	}	
 
 	// this function will handle all the rendering for the view-todo view 
+	// this will be only called by the use of side navigation project title
 	function render(e) {
 		Clear_Content(); // clear all the content inside the main view todo
 		// get the target innerHTML and use it to change project title
 		projectTitle.innerHTML = e.target.innerHTML;
-		console.log(Add_Todo.getCollection())		
+		Render_Todo(Add_Todo.getCollection().personal[projectTitle.innerHTML])
+	}
+
+	// this function will update the view-todo once the projectCollection is updated
+	function update() {
+		Clear_Content(); // clear all the content inside the main view todo
 		Render_Todo(Add_Todo.getCollection().personal[projectTitle.innerHTML])
 	}
 
 	return {
 		renderPersonalProject,
-		render
+		render,
+		update
 	}
 })();
