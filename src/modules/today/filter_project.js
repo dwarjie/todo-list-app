@@ -15,6 +15,4 @@ export function Filter_Project(todoCollection, callBackFunc) {
 			}
 		});
 	}
-
-	console.log(filteredCollection)
 };
