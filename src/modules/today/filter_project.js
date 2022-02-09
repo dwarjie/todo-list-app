@@ -15,4 +15,6 @@ export function Filter_Project(todoCollection, callBackFunc) {
 			}
 		});
 	}
+
+	return filteredCollection;
 };

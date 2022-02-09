@@ -22,9 +22,10 @@ export const Filtered_Today = (function() {
 		let todoCollection = Add_Todo.getCollection().inbox;
 		let filteredCollection = todoCollection.filter(dueToday);
 		// filter the todo collection in personal project
-		Filter_Project(Add_Todo.getCollection().personal, dueToday);
+		let filteredProject = Filter_Project(Add_Todo.getCollection().personal, dueToday);
 
-		return filteredCollection;
+		// merge the array of filtered inbox todo and the personal project todo
+		return filteredCollection.concat(filteredProject);
 	}
 
 	return {
