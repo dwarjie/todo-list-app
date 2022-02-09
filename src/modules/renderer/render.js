@@ -8,7 +8,7 @@ export function Render_Todo(todoCollection) {
 	// check if there's a value to the todoCollection object
 	if (todoCollection != undefined) {
 		if (Object.keys(todoCollection).length != 0) {
-			todoList.innerHTML = todoCollection.map((item) => {
+			todoList.innerHTML += todoCollection.map((item) => {
 				return Todo_Container(item);
 			}).join(''); 
 		}
