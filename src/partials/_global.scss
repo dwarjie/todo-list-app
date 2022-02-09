@@ -25,6 +25,10 @@ h3 {
 	font-weight: 400;
 }
 
+input {
+	font-family: inherit;
+}
+
 .wrapper {
 	@include twelveColumn();
 }
