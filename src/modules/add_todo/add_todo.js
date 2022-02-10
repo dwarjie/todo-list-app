@@ -30,7 +30,7 @@ export const Add_Todo = (function() {
 				Todo_Data.todoCollections = Adder_Todo(itemDetails, "Inbox");
 				Inbox.render();
 			}else {
-				collections = Adder_Todo(itemDetails, projectTitle.innerHTML);
+				Todo_Data.todoCollections = Adder_Todo(itemDetails, projectTitle.innerHTML);
 				Personal.update(); // update the view-todo
 			}
 			Clear_Form(); // clear the form

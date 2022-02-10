@@ -9,7 +9,7 @@ export const Add_Project = (function() {
 
 	// function callback for the add project button
 	function addPersonalProject() {
-		Todo_Data.personalProjectCollection = Adder_Personal_Project();
+		Adder_Personal_Project();
 		Personal.renderPersonalProject();
 	}
 })();

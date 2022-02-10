@@ -17,8 +17,7 @@ export const Personal = (function() {
 
 	// this function will render all the created personal projects
 	function renderPersonalProject() {
-		console.log(Todo_Data.personalProjectCollection)
-		Render_Personal_Project(Todo_Data.personalProjectCollection);
+		Render_Personal_Project();
 		Render_Project_Adder();
 		Clear_Input();
 	}	
