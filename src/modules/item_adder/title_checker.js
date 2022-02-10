@@ -5,7 +5,7 @@
 export function Title_Checker(projectTitle) {
 	// check the project title. If it's Inbox then return true
 	// otherwise false
-	if (projectTitle == "Inbox") 
+	if (projectTitle == "Inbox" || "Today") 
 		return true;
 	return false;
 };
