@@ -8,11 +8,15 @@ export const Todo_Data = (function() {
 		personal: []
 	}; // here will go the todo_collection
 	let personalProjectCollection = []; // here we will assign the personal project collection
-	let todoId;	
+	let todoId = 0;	
 
+	function getTodoId() {
+		todoId++; // increment the id in order for every todo have unique id
+		return todoId;
+	}
 	return {
 		todoCollections,
 		personalProjectCollection,
-		todoId
+		getTodoId
 	}
 })();

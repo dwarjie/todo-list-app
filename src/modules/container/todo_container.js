@@ -13,8 +13,8 @@ export function Todo_Container(itemDetails) {
 	            </div>
 	            <div class="todo-prop">
 	                <h3>${itemDetails.due}</h3>
-	                <input type="image" class="button button-hover todo-edit" id="edit-todo" src="../src/img/edit.png">
-	                <input type="image" class="button button-hover todo-delete" id="delete-todo" src="../src/img/delete.png">
+	                <input type="image" data-id="${itemDetails.id}" class="button button-hover todo-edit" id="edit-todo" src="../src/img/edit.png">
+	                <input type="image" data-id="${itemDetails.id}" class="button button-hover todo-delete" id="delete-todo" src="../src/img/delete.png">
 	            </div>
         	</div>`;
 }
