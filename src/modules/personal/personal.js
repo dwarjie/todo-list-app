@@ -1,11 +1,11 @@
+import { Todo_Data } from '../data/todo_data.js';
 import { Render_Project_Adder } from '../renderer/render_project_adder.js';
 import { Render_Todo } from '../renderer/render.js';
 import { Render_Button_State } from '../renderer/render_button_state.js';
 import { Clear_Button_State } from '../renderer/clear_button_state.js';
 import { Cancel_Project } from './cancel_adding_project.js';
-import { Add_Project } from './add_project.js';
-import { Add_Todo } from '../add_todo/add_todo.js';
 import { Render_Personal_Project } from '../renderer/render_personal_project.js';
+import { Add_Project } from './add_project.js';
 import { Clear_Input } from './clear_input.js';
 import { Clear_Content } from '../renderer/clear_content.js';
 
@@ -17,7 +17,8 @@ export const Personal = (function() {
 
 	// this function will render all the created personal projects
 	function renderPersonalProject() {
-		Render_Personal_Project(Add_Project.getCollection());
+		console.log(Todo_Data.personalProjectCollection)
+		Render_Personal_Project(Todo_Data.personalProjectCollection);
 		Render_Project_Adder();
 		Clear_Input();
 	}	
@@ -30,13 +31,13 @@ export const Personal = (function() {
 		Clear_Content(); // clear all the content inside the main view todo
 		// get the target innerHTML and use it to change project title
 		projectTitle.innerHTML = e.target.innerHTML;
-		Render_Todo(Add_Todo.getCollection().personal[projectTitle.innerHTML])
+		Render_Todo(Todo_Data.todoCollections.personal[projectTitle.innerHTML])
 	}
 
 	// this function will update the view-todo once the projectCollection is updated
 	function update() {
 		Clear_Content(); // clear all the content inside the main view todo
-		Render_Todo(Add_Todo.getCollection().personal[projectTitle.innerHTML])
+		Render_Todo(Todo_Data.todoCollections.personal[projectTitle.innerHTML])
 	}
 
 	return {
