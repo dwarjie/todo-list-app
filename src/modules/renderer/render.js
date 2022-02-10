@@ -1,4 +1,6 @@
 import { Todo_Container } from "../container/todo_container.js";
+import { Update_Event } from '../event/update_event.js';
+import { Delete_Event } from '../event/delete_event.js';
 // this will let us render all the todo item collestions
 // using the container
 
@@ -11,6 +13,14 @@ export function Render_Todo(todoCollection) {
 			todoList.innerHTML += todoCollection.map((item) => {
 				return Todo_Container(item);
 			}).join(''); 
+
+			// get all the update and delete buttons to add events
+			let btnUpdateElements = document.querySelectorAll('#edit-todo');
+			let btnDeleteElements = document.querySelectorAll('#delete-todo');
+			// then call the event managers for update and delete
+			Update_Event(btnUpdateElements);
+			Delete_Event(btnDeleteElements);
+
 		}
 	}else {
 		console.log('undefined');
