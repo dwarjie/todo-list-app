@@ -1,3 +1,4 @@
+import { Modal } from '../top_navigation/show_modal.js';
 import { Todo_Data } from './todo_data.js';
 import { Search_Inbox } from './search_inbox.js';
 import { Search_Project } from './search_project.js';
@@ -25,4 +26,6 @@ export function Search(id) {
 	}
 	if (itemKey != -1) 
 		console.log(Todo_Data.todoCollections.personal[projectKey][itemKey])
+
+	Modal('show-modal');
 };
