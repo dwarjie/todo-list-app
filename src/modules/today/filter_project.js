@@ -1,5 +1,5 @@
 // this module will filter the project todo's
-// it will look through the personal key check if it's length is not 0 (means it has customer project)
+// it will look through the personal key check if it's length is not 0 (means it has user project)
 // then check inside that array custom project then check the other custom project
 
 export function Filter_Project(todoCollection, callBackFunc) {
