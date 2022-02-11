@@ -18,6 +18,11 @@ function searchItem(id, todoCollections) {
 export function Search(id) {
 	// call the searching module for the inbox and project
 	const inboxKey = Search_Inbox(id, searchItem);	
-	const projectKey = Search_Project(id, searchItem);
-	console.log(inboxKey, projectKey)
+	const { itemKey, projectKey }= Search_Project(id, searchItem);
+
+	if (inboxKey != -1) {
+		console.log(Todo_Data.todoCollections.inbox[inboxKey])
+	}
+	if (itemKey != -1) 
+		console.log(Todo_Data.todoCollections.personal[projectKey][itemKey])
 };
