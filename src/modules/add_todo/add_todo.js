@@ -3,6 +3,7 @@ import { Title_Checker } from '../item_adder/title_checker.js';
 import { Get_Details } from "./get_todo_details.js";
 import { Clear_Form } from "../top_navigation/clear_modal.js";
 import { Validate_Todo } from "../validation/validate_todo.js";
+import { Update_Item } from '../event/update_event.js';
 import { Adder_Todo } from "../item_adder/adder.js";
 import { Inbox } from "../inbox/inbox.js";
 import { Personal } from '../personal/personal.js';
@@ -21,6 +22,11 @@ export const Add_Todo = (function() {
 	// return the details as an object then assign it to itemDetails
 	// then call the Adder_Todo in order to add the object to the todoCollection
 	function addToDoItem() {
+		// check if the button is for updating or not
+		if (btnAddItem.innerHTML === "Update") {
+			Update_Item();
+			return;
+		}
 		// validate if all input has value
 		if (Validate_Todo()) {
 			let itemDetails = Get_Details();

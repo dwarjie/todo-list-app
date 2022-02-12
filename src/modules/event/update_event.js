@@ -1,10 +1,34 @@
 import { Event_Manager } from './event_manager.js';
 import { Search } from '../data/search.js';
+import { Get_Details } from '../add_todo/get_todo_details.js';
+import { Populate_Update_Modal } from '../data/populate_update_modal.js';
+import { Render_Update_Modal } from '../renderer/render_update_modal.js';
+import { Inbox } from '../inbox/inbox.js';
+import { Today } from '../today/today.js';
+import { Personal } from '../personal/personal.js';
 // this will handle the adding of events to all update buttons in todo items
 
+let todoItem; // this will hold the specific todoItem
 function updateTodo(e) {
 	let id = e.target.dataset.id;
-	Search(id);
+	todoItem = Search(id);
+	Render_Update_Modal(); // show the update modal
+	Populate_Update_Modal(todoItem);
+}
+
+// this function will access the searched item
+// and update all of it's value
+export function Update_Item() {
+	const todoDetails = Get_Details(); // get the details of the update_modal
+	todoItem.due = todoDetails.due;
+	todoItem.priority = todoDetails.priority;
+	todoItem.title = todoDetails.title;
+	todoItem.desc = todoDetails.desc;
+
+	// re-render the view-todo
+	Inbox.render();
+	// Today.render();
+	// Personal.update();
 }
 
 export function Update_Event(elements) {
