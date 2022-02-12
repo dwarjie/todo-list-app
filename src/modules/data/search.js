@@ -1,5 +1,6 @@
-import { Modal } from '../top_navigation/show_modal.js';
 import { Todo_Data } from './todo_data.js';
+import { Populate_Update_Modal } from './populate_update_modal.js';
+import { Render_Update_Modal } from '../renderer/render_update_modal.js';
 import { Search_Inbox } from './search_inbox.js';
 import { Search_Project } from './search_project.js';
 // this module will search for the specific todo item
@@ -17,15 +18,20 @@ function searchItem(id, todoCollections) {
 }
 
 export function Search(id) {
+	let todoItem; // this will hold the searched item
 	// call the searching module for the inbox and project
 	const inboxKey = Search_Inbox(id, searchItem);	
 	const { itemKey, projectKey }= Search_Project(id, searchItem);
 
 	if (inboxKey != -1) {
 		console.log(Todo_Data.todoCollections.inbox[inboxKey])
+		todoItem = Todo_Data.todoCollections.inbox[inboxKey];
 	}
-	if (itemKey != -1) 
+	if (itemKey != -1) {
 		console.log(Todo_Data.todoCollections.personal[projectKey][itemKey])
+		todoItem = Todo_Data.todoCollections.personal[projectKey][itemKey];
+	}
 
-	Modal('show-modal');
+	Render_Update_Modal(); // show the update modal
+	Populate_Update_Modal(todoItem);
 };

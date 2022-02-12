@@ -1,4 +1,5 @@
 import { Add_Todo } from '../add_todo/add_todo.js';
+import { Clear_Form } from './clear_modal.js';
 import { modal, Modal } from './show_modal.js';
 import { CloseModal } from './close_modal.js';
 import { Set_Current_Date } from '../date/set_current_date.js';
@@ -7,6 +8,7 @@ import { Set_Current_Date } from '../date/set_current_date.js';
 
 const btnAddTodo = document.querySelector('#create-todo');
 const btnShowInfo = document.querySelector('#show-info');
+const addButton = document.querySelector('#add-item'); // change the innerHTML to add. Might be changed because of update
 
 export const Top_Navigation = (function() {
 	// add event listener to the buttons
@@ -15,6 +17,8 @@ export const Top_Navigation = (function() {
 	// btnShowInfo.addEventListener('click' showInformation);
 
 	function showModal() {
+		Clear_Form(); // make sure to reset everything
+		addButton.innerHTML = "Add";
 		Modal('show-modal');
 	}
 

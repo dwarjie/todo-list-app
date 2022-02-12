@@ -4,5 +4,6 @@ import { Current_Date } from './current_date.js';
 
 const dueDate = document.querySelector('#modal-due-date');
 export const Set_Current_Date = (function() {
+	console.log(typeof Current_Date);
 	dueDate.value = Current_Date;
 })();
