@@ -8,3 +8,7 @@ export function Render_Update_Modal() {
 	Modal('show-modal');
 	updateButton.innerHTML = "Update";
 }
+
+export function Close_Update_Modal() {
+	Modal('show-modal');
+}

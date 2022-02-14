@@ -20,4 +20,15 @@ export const Today = (function() {
 		projectTitle.innerHTML = "Today";
 		Render_Todo(Filtered_Today.getFilteredCollection());
 	}
+
+	// this function will be used when the todo list is updated
+	// and the view todo has to be rerendered.
+	function update() {
+		Clear_Content();
+		Render_Todo(Filtered_Today.getFilteredCollection());
+	}
+
+	return {
+		update
+	}
 })();

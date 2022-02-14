@@ -23,7 +23,16 @@ export const Inbox = (function() {
 		Render_Personal();
 	}
 
+	// this function will be used when the todo list is updated
+	// and the view todo has to be rerendered.
+	function update() {
+		Clear_Content();
+		Render_Todo(Todo_Data.todoCollections.inbox);
+		Render_Personal();
+	}
+
 	return {
-		render
+		render,
+		update
 	}
 })();

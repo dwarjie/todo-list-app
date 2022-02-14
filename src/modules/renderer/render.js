@@ -23,6 +23,6 @@ export function Render_Todo(todoCollection) {
 
 		}
 	}else {
-		console.log('undefined');
+		return undefined;
 	}
 }

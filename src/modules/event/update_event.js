@@ -9,11 +9,22 @@ import { Personal } from '../personal/personal.js';
 // this will handle the adding of events to all update buttons in todo items
 
 let todoItem; // this will hold the specific todoItem
+const projectTitle = document.querySelector('.project-title');
 function updateTodo(e) {
 	let id = e.target.dataset.id;
 	todoItem = Search(id);
 	Render_Update_Modal(); // show the update modal
 	Populate_Update_Modal(todoItem);
+}
+
+// this function will call all the update function of every tab in order to 
+// re-render the view todo
+function renderUpdated() {
+	// check what tab to re-render
+	// re-render the view-todo
+	if (projectTitle.innerHTML == "Inbox") return Inbox.update();
+	if (projectTitle.innerHTML == "Today") return Today.update();
+	Personal.update();
 }
 
 // this function will access the searched item
@@ -25,10 +36,7 @@ export function Update_Item() {
 	todoItem.title = todoDetails.title;
 	todoItem.desc = todoDetails.desc;
 
-	// re-render the view-todo
-	Inbox.render();
-	// Today.render();
-	// Personal.update();
+	renderUpdated();
 }
 
 export function Update_Event(elements) {
