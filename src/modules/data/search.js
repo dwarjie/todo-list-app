@@ -27,5 +27,12 @@ export function Search(id) {
 	if (itemKey != -1) {
 		todoItem = Todo_Data.todoCollections.personal[projectKey][itemKey];
 	}
-	return todoItem;
+
+	// return multiple values
+	return {
+		item: todoItem,
+		inboxKey: inboxKey,
+		itemKey: itemKey,
+		projectKey: projectKey
+	}
 };

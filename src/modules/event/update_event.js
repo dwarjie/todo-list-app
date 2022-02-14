@@ -12,7 +12,8 @@ let todoItem; // this will hold the specific todoItem
 const projectTitle = document.querySelector('.project-title');
 function updateTodo(e) {
 	let id = e.target.dataset.id;
-	todoItem = Search(id);
+	const searchedItem = Search(id);
+	todoItem = searchedItem.item;
 	Render_Update_Modal(); // show the update modal
 	Populate_Update_Modal(todoItem);
 }
