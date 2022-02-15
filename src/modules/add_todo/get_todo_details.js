@@ -6,6 +6,7 @@ const inputDueDate = document.querySelector('#modal-due-date');
 const inputPriority = document.querySelector('#modal-priority');
 const inputTitle = document.querySelector('#modal-title');
 const inputDescription = document.querySelector('#modal-description');
+const cbStatus = document.querySelector('#cbStatus');
 
 export function Get_Details() {	
 	// call the function factory for making a todo item

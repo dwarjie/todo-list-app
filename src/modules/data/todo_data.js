@@ -4,7 +4,16 @@
 
 export const Todo_Data = (function() {
 	let todoCollections = {
-		inbox: [],
+		inbox: [
+			{
+				desc: "asaas",
+				due: "2022-02-15",
+				id: 1,
+				priority: "high-priority",
+				status: "finish",
+				title: "asas"	
+			}
+		],
 		personal: []
 	}; // here will go the todo_collection
 	let personalProjectCollection = []; // here we will assign the personal project collection
