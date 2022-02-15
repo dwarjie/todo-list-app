@@ -8,7 +8,7 @@ export function Todo_Container(itemDetails) {
 	// with the values from the itemDetails
 	return `<div class="list-item">
 	            <div class="todo-title">
-	                <input type="checkbox" class="${itemDetails.priority}">
+	                <input type="checkbox" data-id="${itemDetails.id}" class="${itemDetails.priority}" id="cbStatus" alt="unfinish">
 	                <h2>${itemDetails.title}</h2>
 	            </div>
 	            <div class="todo-prop">
