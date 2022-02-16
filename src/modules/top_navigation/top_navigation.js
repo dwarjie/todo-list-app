@@ -1,5 +1,5 @@
 import { Clear_Form } from './clear_modal.js';
-import { Add_Todo } from '../add_todo/add_todo.js';
+import { Add_Todo } from '../add_todo/add_todo.js'
 import { Modal } from './show_modal.js';
 import { CloseModal } from './close_modal.js';
 // This module will handle the click event for the buttons in top navigation
@@ -22,7 +22,8 @@ export const Top_Navigation = (function() {
 	}
 
 	function windowsOnClick(event) {
-		if (CloseModal(event, Modal.getModal()) == true)
+		console.log(Modal.getModal().classList[0])
+		if (CloseModal(event, Modal.getModal(), Modal.getModal().classList[0]) == true)
 			Modal.show("show-modal");
 	}
 })();
