@@ -5,6 +5,6 @@ import { Modal } from '../top_navigation/show_modal.js';
 
 const updateButton = document.querySelector('#add-item');
 export function Render_Update_Modal() {
-	Modal('show-modal');
+	Modal.show("show-modal");
 	updateButton.innerHTML = "Update";
 }

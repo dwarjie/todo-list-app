@@ -12,3 +12,10 @@
 	grid-template-columns: repeat(12, [col-start] 1fr);
 	grid-template-rows: repeat(12, 1fr);
 };
+
+@mixin showModal() {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
