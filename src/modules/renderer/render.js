@@ -2,6 +2,7 @@ import { Todo_Container } from "../container/todo_container.js";
 import { Update_Event } from '../event/update_event.js';
 import { Delete_Event } from '../event/delete_event.js';
 import { Status_Event } from '../event/status_event.js';
+import { Details_Event } from '../event/details_event.js';
 import { Render_Status } from './render_status.js';
 // this will let us render all the todo item collestions
 // using the container
@@ -20,12 +21,13 @@ export function Render_Todo(todoCollection) {
 			let btnUpdateElements = document.querySelectorAll('#edit-todo');
 			let btnDeleteElements = document.querySelectorAll('#delete-todo');
 			let cbStatusElements = document.querySelectorAll('#cbStatus');
-			console.log(cbStatusElements)
+			let todoItemElements = document.querySelectorAll('.list-item');
 
 			// then call the event managers for update and delete
 			Update_Event(btnUpdateElements);
 			Delete_Event(btnDeleteElements);
 			Status_Event(cbStatusElements);
+			Details_Event(todoItemElements);
 			Render_Status(cbStatusElements);
 		}
 	}else {

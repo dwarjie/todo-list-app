@@ -6,7 +6,7 @@
 export function Todo_Container(itemDetails) {
 	// generate a todo list container
 	// with the values from the itemDetails
-	return `<div class="list-item">
+	return `<div class="list-item" data-id="${itemDetails.id}">
 	            <div class="todo-title">
 	                <input type="checkbox" data-id="${itemDetails.id}" class="${itemDetails.priority}" id="cbStatus" alt="${itemDetails.status}">
 	                <h2>${itemDetails.title}</h2>
