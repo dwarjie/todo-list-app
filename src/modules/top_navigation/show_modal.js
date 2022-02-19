@@ -1,7 +1,6 @@
 // this module will toggle the class of the modal element
 // in order the modal to show
-const modal = document.querySelector('.modal');
-
+	
 export const Modal = (function() {
 	let modal; // here the modal element will go
 

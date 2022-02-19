@@ -2,7 +2,7 @@
 // and check if the modal container is the right one
 // if true, close the modal
 
-export function CloseModal(event, modalElement, modalClass) {
-	if (event.target === modalElement && modalElement.classList[0] == modalClass)
+export function CloseModal(event, modalElement) {
+	if (event.target === modalElement)
 		return true;
 }
