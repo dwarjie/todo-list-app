@@ -11,6 +11,7 @@ import { Personal } from '../personal/personal.js';
 let todoItem; // this will hold the specific todoItem
 const projectTitle = document.querySelector('.project-title');
 function updateTodo(e) {
+	e.stopImmediatePropagation(); // to stop the event from bubbling
 	let id = e.target.dataset.id;
 	const searchedItem = Search(id);
 	todoItem = searchedItem.item;

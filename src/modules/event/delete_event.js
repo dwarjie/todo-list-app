@@ -18,6 +18,7 @@ function renderUpdated() {
 
 const projectTitle = document.querySelector('.project-title');
 function deleteTodo(e) {
+	e.stopImmediatePropagation(); // stop the event from bubbling
 	let id = e.target.dataset.id;
 	// check if the todoItem is in Inbox or Project
 	// True -> Inbox | False -> Personal
@@ -26,7 +27,6 @@ function deleteTodo(e) {
 		Todo_Data.todoCollections.inbox.splice(searchedItem.inboxKey,1);
 	if (searchedItem.itemKey != -1)
 		Todo_Data.todoCollections.personal[searchedItem.projectKey].splice(searchedItem.itemKey,1);
-	console.log(Todo_Data.todoCollections)
 	renderUpdated();
 }
 
