@@ -4,6 +4,7 @@ import { Search } from '../data/search.js';
 import { Inbox } from '../inbox/inbox.js';
 import { Today } from '../today/today.js';
 import { Personal } from '../personal/personal.js';
+import { Save_Data } from '../data/save_data.js';
 // this will handle the adding of delete event to all todo list items
 
 // this function will call all the update function of every tab in order to 
@@ -27,6 +28,7 @@ function deleteTodo(e) {
 		Todo_Data.todoCollections.inbox.splice(searchedItem.inboxKey,1);
 	if (searchedItem.itemKey != -1)
 		Todo_Data.todoCollections.personal[searchedItem.projectKey].splice(searchedItem.itemKey,1);
+	Save_Data();
 	renderUpdated();
 }
 

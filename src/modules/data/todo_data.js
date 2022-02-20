@@ -23,9 +23,14 @@ export const Todo_Data = (function() {
 		todoId++; // increment the id in order for every todo have unique id
 		return todoId;
 	}
+
+	function getId() {
+		return todoId;
+	}
 	return {
 		todoCollections,
 		personalProjectCollection,
+		getId,
 		getTodoId
 	}
 })();

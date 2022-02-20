@@ -6,6 +6,7 @@ import { Render_Update_Modal } from '../renderer/render_update_modal.js';
 import { Inbox } from '../inbox/inbox.js';
 import { Today } from '../today/today.js';
 import { Personal } from '../personal/personal.js';
+import { Save_Data } from '../data/save_data.js';
 // this will handle the adding of events to all update buttons in todo items
 
 let todoItem; // this will hold the specific todoItem
@@ -38,6 +39,7 @@ export function Update_Item() {
 	todoItem.title = todoDetails.title;
 	todoItem.desc = todoDetails.desc;
 
+	Save_Data();
 	renderUpdated();
 }
 

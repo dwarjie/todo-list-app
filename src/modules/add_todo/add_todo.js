@@ -7,6 +7,7 @@ import { Update_Item } from '../event/update_event.js';
 import { Adder_Todo } from "../item_adder/adder.js";
 import { Inbox } from "../inbox/inbox.js";
 import { Personal } from '../personal/personal.js';
+import { Save_Data } from '../data/save_data.js';
 
 // this module is for accessing the modal form
 // once the Add button is clicked, it will check for required field if one is empty, prompt that all field should be filled
@@ -39,6 +40,7 @@ export const Add_Todo = (function() {
 				Todo_Data.todoCollections = Adder_Todo(itemDetails, projectTitle.innerHTML);
 				Personal.update(); // update the view-todo
 			}
+			Save_Data();
 			Clear_Form(); // clear the form
 		}else {
 			alert("Fill all fields!");
