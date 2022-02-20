@@ -15,6 +15,10 @@ const btnNewProject = document.querySelector("#create-personal");
 export const Personal = (function() {
 	btnNewProject.addEventListener('click', Render_Project_Adder);
 
+	function renderProject() {
+		Render_Personal_Project();
+	}
+
 	// this function will render all the created personal projects
 	function renderPersonalProject() {
 		Render_Personal_Project();
@@ -41,6 +45,7 @@ export const Personal = (function() {
 
 	return {
 		renderPersonalProject,
+		renderProject,	
 		render,
 		update
 	}

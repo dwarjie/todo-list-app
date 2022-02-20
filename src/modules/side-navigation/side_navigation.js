@@ -8,5 +8,6 @@ export const Side_Navigation = (function() {
 	// show the inbox tab defualt
 	window.onload = () => {
 		Inbox.render();
+		Personal.renderProject();
 	};
 })();

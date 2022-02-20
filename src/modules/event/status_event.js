@@ -3,6 +3,7 @@ import { Search } from '../data/search.js';
 import { Inbox } from '../inbox/inbox.js';
 import { Today } from '../today/today.js';
 import { Personal } from '../personal/personal.js';
+import { Save_Data } from '../data/save_data.js';
 // this module will handle the adding of event listener for checkboxes in the todo
 // using the Event Manager.
 // this will update the todo status from "Finished" -> "Unfinished"
@@ -10,10 +11,12 @@ import { Personal } from '../personal/personal.js';
 const projectTitle = document.querySelector('.project-title');
 // this function is the main function for status events
 function changeStatus(e) {
+	e.stopImmediatePropagation(); // stop bubbling
 	let id = e.target.dataset.id
 	const searchedItem =  Search(id);
 	let todoItem = searchedItem.item;
 	updateStatus(todoItem);
+	Save_Data();
 	renderUpdated();
 }
 

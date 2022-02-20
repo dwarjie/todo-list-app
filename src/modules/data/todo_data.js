@@ -3,21 +3,33 @@
 
 
 export const Todo_Data = (function() {
-	let todoCollections = {
+	let todoDefault = {
 		inbox: [
 			{
-				desc: "asaas",
-				due: "2022-02-15",
 				id: 0,
+				title: "Add your first todo",
+				desc: "Click the add icon at the top right and start filling your first todo",
+				due: "2022-02-15",
 				priority: "high-priority",
-				status: "finish",
-				title: "asas"	
+				status: undefined,
+			},
+			{
+				id: 1,
+				title: "Add your first Personal Project",
+				desc: "Click the add icon at the Personal tab and give your first personal project a title",
+				due: "2022-02-15",
+				priority: "high-priority",
+				status: undefined,
 			}
 		],
 		personal: []
+	}
+	let todoCollections = {
+		inbox: [],
+		personal: []
 	}; // here will go the todo_collection
-	let personalProjectCollection = []; // here we will assign the personal project collection
-	let todoId = 0;	
+	let personalProjectCollection = {}; // here we will assign the personal project collection
+	let todoId = 1;	
 
 	function getTodoId() {
 		todoId++; // increment the id in order for every todo have unique id
@@ -27,10 +39,16 @@ export const Todo_Data = (function() {
 	function getId() {
 		return todoId;
 	}
+
+	function setId(id) {
+		todoId = id;
+	}
 	return {
+		todoDefault,
 		todoCollections,
 		personalProjectCollection,
 		getId,
-		getTodoId
+		getTodoId,
+		setId
 	}
 })();

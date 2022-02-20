@@ -7,12 +7,14 @@ import { Personal } from '../personal/personal.js';
 const personalProjectList = document.querySelector('#personal-project-list');
 export function Render_Personal_Project() {
 	let personalProjectCollection = Todo_Data.personalProjectCollection;
-	personalProjectList.innerHTML = personalProjectCollection.map((project) => {
-		return Personal_Container(project);
-	}).join('');
+	console.log(personalProjectCollection)
+	if (personalProjectCollection.length != 0) {
+		personalProjectList.innerHTML = personalProjectCollection.map((project) => {
+			return Personal_Container(project);
+		}).join('');
 
-	let btnPersonalProjects = document.querySelectorAll('#btnPersonalProject');
-	// this will call the event manager in order to add event listeners to the personal project
-	Event_Manager(btnPersonalProjects, Personal.render);
-
+		let btnPersonalProjects = document.querySelectorAll('#btnPersonalProject');
+		// this will call the event manager in order to add event listeners to the personal project
+		Event_Manager(btnPersonalProjects, Personal.render);
+	}
 };

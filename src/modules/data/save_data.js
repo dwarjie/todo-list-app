@@ -4,8 +4,10 @@ import { Todo_Data } from './todo_data.js';
 export function Save_Data() {
 	const STORAGE_NAME = "todoCollections";
 	const ID_NAME = "todoId";
+	const PERSONAL_NAME = "personalCollections";
 
 	// access the saved object in the localStorage and save the todoCollections and id there
 	localStorage.setItem(STORAGE_NAME, JSON.stringify(Todo_Data.todoCollections));
 	localStorage.setItem(ID_NAME, Todo_Data.getId());
+	localStorage.setItem(PERSONAL_NAME, Todo_Data.personalProjectCollection);
 }

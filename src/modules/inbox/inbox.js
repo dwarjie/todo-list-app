@@ -19,6 +19,8 @@ export const Inbox = (function() {
 		Clear_Content();
 		Render_Button_State("#show-inbox");
 		projectTitle.innerHTML = "Inbox";
+		// check if collection is not null
+		if (Todo_Data.todoCollections === null) return
 		Render_Todo(Todo_Data.todoCollections.inbox);
 		Render_Personal();
 	}
