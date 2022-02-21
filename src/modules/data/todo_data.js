@@ -28,7 +28,7 @@ export const Todo_Data = (function() {
 		inbox: [],
 		personal: []
 	}; // here will go the todo_collection
-	let personalProjectCollection = {}; // here we will assign the personal project collection
+	let personalProjectCollection = []; // here we will assign the personal project collection
 	let todoId = 1;	
 
 	function getTodoId() {

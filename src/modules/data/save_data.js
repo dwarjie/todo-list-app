@@ -9,5 +9,5 @@ export function Save_Data() {
 	// access the saved object in the localStorage and save the todoCollections and id there
 	localStorage.setItem(STORAGE_NAME, JSON.stringify(Todo_Data.todoCollections));
 	localStorage.setItem(ID_NAME, Todo_Data.getId());
-	localStorage.setItem(PERSONAL_NAME, Todo_Data.personalProjectCollection);
+	localStorage.setItem(PERSONAL_NAME, JSON.stringify(Todo_Data.personalProjectCollection));
 }

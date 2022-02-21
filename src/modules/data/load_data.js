@@ -8,7 +8,7 @@ export function Load_Data() {
 	if (localStorage.getItem('todoCollection') === null && localStorage.getItem('todoId') === null && localStorage.getItem('personalCollections') === null) {
 		Todo_Data.todoCollections = Todo_Data.todoDefault;
 		Todo_Data.setId = 1;
-		Todo_Data.personalProjectCollection = {};
+		Todo_Data.personalProjectCollection = [];
 		Save_Data();
 		return
 	}
