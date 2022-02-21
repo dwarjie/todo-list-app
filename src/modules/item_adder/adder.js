@@ -1,6 +1,7 @@
 import { Todo_Data } from '../data/todo_data.js';
 import { Title_Checker } from './title_checker.js';
 import { Project_Checker } from './project_checker.js';
+import { Save_Data } from '../data/save_data.js';
 // this module has multiple purpose
 // this can add a todo to the todoList
 // or even add a new personal project
@@ -20,6 +21,7 @@ export function Adder_Todo(itemDetails, projectTitle) {
 			Todo_Data.todoCollections.personal[projectTitle].push(itemDetails)
 		}
 	}
+	Save_Data();
 	console.log(Todo_Data.todoCollections)
 	return Todo_Data.todoCollections; // return the whole collection
 }
