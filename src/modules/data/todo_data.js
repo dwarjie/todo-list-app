@@ -22,14 +22,25 @@ export const Todo_Data = (function() {
 				status: undefined,
 			}
 		],
-		personal: []
+		personal: {
+			'First Personal': [
+				{
+					id: 2,
+					title: "Add your first personal todo",
+					desc: "Click the add icon at the top right and fill up all the details",
+					due: "2022-02-22",
+					priority: "high-priority",
+					status: undefined,
+				}
+			]
+		}
 	}
 	let todoCollections = {
 		inbox: [],
 		personal: []
 	}; // here will go the todo_collection
 	let personalProjectCollection = []; // here we will assign the personal project collection
-	let todoId = 1;	
+	let todoId = 2;	
 
 	function getTodoId() {
 		todoId++; // increment the id in order for every todo have unique id

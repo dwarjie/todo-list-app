@@ -23,7 +23,7 @@ function changeStatus(e) {
 function updateStatus(item) {
 	if (item.status == "undefined")
 		return item.status = "finish"
-	if (item.status == "finish") {}
+	if (item.status == "finish")
 		return item.status = "undefined"
 }
 

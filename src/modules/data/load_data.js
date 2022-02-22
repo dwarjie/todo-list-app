@@ -7,8 +7,8 @@ export function Load_Data() {
 	// check if data does not exist from the localStorage
 	if (localStorage.getItem('todoCollection') === null && localStorage.getItem('todoId') === null && localStorage.getItem('personalCollections') === null) {
 		Todo_Data.todoCollections = Todo_Data.todoDefault;
-		Todo_Data.setId = 1;
-		Todo_Data.personalProjectCollection = [];
+		Todo_Data.setId = 2;
+		Todo_Data.personalProjectCollection = ['First Personal'];
 		Save_Data();
 		return
 	}

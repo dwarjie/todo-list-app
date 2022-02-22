@@ -11,5 +11,5 @@ const cbStatus = document.querySelector('#cbStatus');
 export function Get_Details() {	
 	// call the function factory for making a todo item
 	// then give the input values as a parameter
-	return Todo(Todo_Data.getTodoId() ,inputTitle.value, inputDescription.value, inputDueDate.value, inputPriority.value);
+	return Todo(Todo_Data.getTodoId() ,inputTitle.value, inputDescription.value, inputDueDate.value, inputPriority.value, "undefined");
 };
