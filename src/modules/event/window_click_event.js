@@ -17,4 +17,3 @@ export function Windows_Click_Event() {
 			return Modal.show("show-info"); 
 	}
 }
-
