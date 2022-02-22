@@ -5,7 +5,6 @@ import { Render_Todo } from  './render.js';
 
 export function Render_Personal() {
 	const personalProjects = Object.keys(Todo_Data.todoCollections.personal); // get the keys of personal projects
-	console.log(personalProjects.length);
 	// check if personal object is not empty
 	if (personalProjects.length != 0) {
 		// not empty

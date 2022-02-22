@@ -11,6 +11,8 @@ export const Modal = (function() {
 			modal = document.querySelector('.modal');
 		if (modalClass == "show-details") 
 			modal = document.querySelector('.details-modal');
+		if (modalClass == "show-info") 
+			modal = document.querySelector('.info-modal');
 
 		modal.classList.toggle(modalClass);
 	}

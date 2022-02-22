@@ -6,12 +6,15 @@ import { CloseModal } from '../top_navigation/close_modal.js';
 export function Windows_Click_Event() {
 	const addModal = document.querySelector('.modal');
 	const detailModal = document.querySelector('.details-modal');
+	const infoModal = document.querySelector('.info-modal');
 
 	if (CloseModal(event, Modal.getModal()) == true) {
 		if (addModal.classList.length > 1) 
 			return Modal.show("show-modal");
 		if (detailModal.classList.length > 1)
 			return Modal.show("show-details");
+		if (infoModal.classList.length > 1)
+			return Modal.show("show-info"); 
 	}
 }
 

@@ -1,0 +1,31 @@
+.info-modal {
+	@include twelveColumn();
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background-color: $modal-shade;
+	// in order to hide the modal at first
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+
+	.modal-container {
+		grid-column: col-start 4 / 10;
+		grid-row: 4 / 9;
+		@include flexBox($direction: column);
+		text-align: center;
+		color: $modal-color;
+		background-color: $modal-background;
+		border-radius: 10px;
+		padding: 0 5.6rem;
+	}
+}
+// in order to show the modal with a simple animation
+.show-info{
+	@include showModal();
+}

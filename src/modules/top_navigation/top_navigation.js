@@ -13,12 +13,18 @@ const addButton = document.querySelector('#add-item'); // change the innerHTML t
 export const Top_Navigation = (function() {
 	// add event listener to the buttons
 	btnAddTodo.addEventListener('click', showModal);
+	btnShowInfo.addEventListener('click', showInfo);
 	// btnShowInfo.addEventListener('click' showInformation);
 
 	function showModal() {
 		Clear_Form(); // make sure to reset everything
 		addButton.innerHTML = "Add";
 		Modal.show("show-modal");
+		window.addEventListener('click', Windows_Click_Event);
+	}
+
+	function showInfo() {
+		Modal.show("show-info");
 		window.addEventListener('click', Windows_Click_Event);
 	}
 })();

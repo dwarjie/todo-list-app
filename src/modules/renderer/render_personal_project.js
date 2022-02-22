@@ -7,7 +7,6 @@ import { Personal } from '../personal/personal.js';
 const personalProjectList = document.querySelector('#personal-project-list');
 export function Render_Personal_Project() {
 	let personalProjectCollection = Todo_Data.personalProjectCollection;
-	console.log(personalProjectCollection)
 	if (personalProjectCollection.length != 0) {
 		personalProjectList.innerHTML = personalProjectCollection.map((project) => {
 			return Personal_Container(project);
