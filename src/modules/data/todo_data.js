@@ -11,7 +11,7 @@ export const Todo_Data = (function() {
 				desc: "Click the add icon at the top right and start filling your first todo",
 				due: "2022-02-15",
 				priority: "high-priority",
-				status: undefined,
+				status: "undefined",
 			},
 			{
 				id: 1,
@@ -19,7 +19,7 @@ export const Todo_Data = (function() {
 				desc: "Click the add icon at the Personal tab and give your first personal project a title",
 				due: "2022-02-15",
 				priority: "high-priority",
-				status: undefined,
+				status: "undefined",
 			}
 		],
 		personal: {
@@ -30,7 +30,7 @@ export const Todo_Data = (function() {
 					desc: "Click the add icon at the top right and fill up all the details",
 					due: "2022-02-22",
 					priority: "high-priority",
-					status: undefined,
+					status: "undefined",
 				}
 			]
 		}
