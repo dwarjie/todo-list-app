@@ -1,4 +1,7 @@
 # Todo List App
+![image](https://github.com/dwarjie/todo-list-app/blob/main/src/img/screenshot.JPG?raw=true)
+
+Try it live [here](https://dwarjie.github.io/todo-list-app/)
 
 This Web application is for a project Odin Project.
 > NOTE: This project is not finalize I may comeback to it one day. It is still not responsive only for Desktop views or Tablet (Portrait).
