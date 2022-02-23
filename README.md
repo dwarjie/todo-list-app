@@ -22,7 +22,7 @@ This project is made using:
 
 ## Usage
 
-```js
+```bash
 npm install
 npm run build
 ```
